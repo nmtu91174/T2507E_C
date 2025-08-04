@@ -38,10 +38,10 @@ int main(){
 				
 			else
 				{ 	x1 = (-b + sqrt(delta))/(2*a);
-					x1 = (-b - sqrt(delta))/(2*a);
+					x2 = (-b - sqrt(delta))/(2*a);
 					
 					printf("Phuong trinh co hai nghiem!\n");
-					printf("Phuong trinh co nghiem x1 la: %.2f", x1);
+					printf("Phuong trinh co nghiem x1 la: %.2f\n", x1);
 					printf("Phuong trinh co nghiem x2 la: %.2f", x2);
 			}
 		}
