@@ -4,8 +4,16 @@
 int main(){
 	
 	int n, temp, c;
-	printf("Nhap n: ");
-	scanf("%d", &n);
+	
+	do{
+		printf("Nhap vao so nguyen duong n: ");
+		scanf("%d", &n);
+		
+		if(n<=0){
+			printf("Hay nhap vao so nguyen duong (n>0)!\n");
+		}	
+	} while (n<=0);
+	
 	
 	c = 0;
 	temp = n;
