@@ -5,6 +5,7 @@ int main(){
 	int a, b;
 	
 	
+	
 	do {
 		
 		printf("\nHay nhap vao hai so a va b (a<b):\n");
@@ -16,13 +17,13 @@ int main(){
 		scanf("%d", &b);
 		
 			if(a>=b){
-				printf("\n>>>> a phai <= b! <<<\n\n==> Hay nhap lai! <==\n");
+				printf("\n>>>> a phai < b! <<<\n\n==> Hay nhap lai! <==\n");
 			} 
 			
 	} while(a>=b);
 	
 	printf("\nCac so nguyen to (i) la: ");
-	
+
 	for(int i = a; i <= b; i++){
 		
 		int c = 0;

@@ -6,11 +6,11 @@ int main(){
 	int n, temp, c;
 	
 	do{
-		printf("Nhap vao so nguyen duong n: ");
+		printf("\nNhap vao so nguyen duong n: ");
 		scanf("%d", &n);
 		
 		if(n<=0){
-			printf("Hay nhap vao so nguyen duong (n>0)!\n");
+			printf("\nHay nhap vao so nguyen duong (n>0)!\n");
 		}	
 	} while (n<=0);
 	
@@ -31,7 +31,7 @@ int main(){
 			
 	int soDau = temp/pow(10,c-1);
 	
-	printf("Chu so dau tien cua n: %d", soDau);
+	printf("\nChu so dau tien cua n: %d", soDau);
 	
 	return 0;
 	
