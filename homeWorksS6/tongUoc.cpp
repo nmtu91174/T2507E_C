@@ -14,6 +14,7 @@ int main(){
 		if(n%i==0){
 			s+=i;
 		}
+		
 	}	
 		
 	printf("Tong cua cac uoc la: %d", s);

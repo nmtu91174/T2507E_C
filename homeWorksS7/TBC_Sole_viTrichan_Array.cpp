@@ -1,3 +1,4 @@
+
 #include <stdio.h>
 
 //TBC so le o vi tri chan trong mang

@@ -7,8 +7,8 @@ int main(){
 	printf("Hay nhap vao mot so n (n >= 0): ");
 	scanf("%d", &n)	;
 	
-	int f0;   // F0
-    int f1;   // F1
+	int f0 = 0;   // F0
+    int f1 = 1;   // F1
     //int i = 2;
     int fn;
     
