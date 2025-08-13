@@ -4,14 +4,17 @@ int main(){
 	
 	int n, i;
 	
-	printf("Nhap vao mot so nguyen bat ky: ");
+	printf("\nNhap vao mot so nguyen bat ky: ");
 	scanf("%d",&n);
 	
+	printf("\n---------------------------------");
+	printf("\n\nCac so le nho hon n = %d  la: ",n);
+		
 	while (i<n){
 		
 		if (i % 2 != 0){
 			
-			printf("Cac so le nho hon n = %d  la: %d\n",n,i);	
+			printf("%d ",i);	
 		}
 		
 		i++;

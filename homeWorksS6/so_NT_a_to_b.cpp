@@ -21,6 +21,8 @@ int main(){
 			
 	} while(a>=b);
 	
+	printf("\nCac so nguyen to (i) la: ");
+	
 	for(int i = a; i <= b; i++){
 		
 		int c = 0;
@@ -33,7 +35,7 @@ int main(){
 		}
 						
 		if(c==2){
-			printf("\nSo nguyen to (i) la: %d", i);
+			printf("%d ", i);
 		}
 			
 	}
