@@ -1,3 +1,4 @@
+
 #include <stdio.h>
 
 //nhap x, tim x có trong mang khong
