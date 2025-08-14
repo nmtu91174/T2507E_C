@@ -19,13 +19,6 @@ int main(){
 		scanf("%d", &a[i]);
 	}
 	
-	printf("\n\n-------------\n");
-	printf("\nCac phan tu da nhap la: "); 
-	for(int i=0; i<n; i++){	
-		printf("%d ", a[i]);
-	}		
-	printf("\n\n-------------\n");
-	
 	int demSole = 0;
 	int tong = 0;
 	
@@ -40,8 +33,15 @@ int main(){
 	}
 	
 	TBC_Sole = (float)tong/demSole;
-	
+	printf("\n\n-------------\n");
 	printf("\nTBC cac so le la: %.2f = tong so le: %d / so so le: %d", TBC_Sole, tong, demSole);
+	
+	printf("\n\n-------------\n");
+	printf("\nCac phan tu da nhap la: "); 
+	for(int i=0; i<n; i++){	
+		printf("%d ", a[i]);
+	}		
+	
 		
 	return 0;
 }	

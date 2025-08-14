@@ -19,15 +19,13 @@ int main(){
 		scanf("%d", &a[i]);
 	}
 	
-	printf("\n\n-------------\n");
-	printf("\nCac phan tu da nhap la: "); 
-	for(int i=0; i<n; i++){	
-		printf("%d ", a[i]);
-	}		
+			
 	printf("\n\n-------------\n");
 	
 	int demSole = 0;
 	int tong = 0;
+	
+	printf("\nVi tri xuat hien so le la: ");
 	
 	for(int i=0; i<n; i++){
 		
@@ -35,9 +33,7 @@ int main(){
 			
 			demSole++;
 			tong = tong + a[i];
-			
-			printf("\nVi tri xuat hien so le la: ");
-			printf("%d\n", i);
+			printf("%d ", i);
 		}
 		
 	}
@@ -46,6 +42,12 @@ int main(){
 	
 	printf("\n-------------\n");
 	printf("\nTBC cac so le o vi tri chan la: %.2f = tong so le: %d / so so le: %d\n", TBC_Sole, tong, demSole);
+	
+	printf("\n-------------\n");
+	printf("\nCac phan tu da nhap la: "); 
+	for(int i=0; i<n; i++){	
+		printf("%d ", a[i]);
+	}
 		
 	return 0;
 }	

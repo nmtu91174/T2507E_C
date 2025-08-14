@@ -8,6 +8,7 @@ int main(){
 	
 	int n;
 	int x;
+	int dem = 0;
 	
 	printf("\nNhap so phan tu cho mang: ");
 	scanf("%d", &n);
@@ -22,22 +23,28 @@ int main(){
 	
 	printf("\nNhap vao mot so bat ky: ");
 	scanf("%d", &x);
-	
-	int dem = 0;
-	
+		
 	printf("\n\n-------------\n");
-	printf("\nx Xuat hien o vi tri: ");
-	
+	printf("\nx Xuat hien o vi tri a[i]: ");
 	for(int i=0; i<n; i++){
+		
 		if(a[i] == x){
 			dem++;
-			 printf("%d ", i);
+			printf("%d ", i);
 		}
-	}
+	} 
+	
+	if(dem>0){
 		
+		
+		printf("\nx co trong mang va xuat hien %d lan!", dem);
 		printf("\n\n-------------\n");
-		printf("x co trong mang va xua hien %d lan!", dem);
-			
+		
+	} else {
+		
+		printf("\nx khong co trong mang!");
+		printf("\n\n-------------\n");
+		}		
 	
 	printf("\n\n-------------\n");
 	printf("\nCac phan tu da nhap la: "); 
