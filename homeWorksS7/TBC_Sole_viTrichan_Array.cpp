@@ -25,7 +25,7 @@ int main(){
 	int demSole = 0;
 	int tong = 0;
 	
-	printf("\nVi tri xuat hien so le la: ");
+	printf("\nVi tri xuat hien so le la a[i]: ");
 	
 	for(int i=0; i<n; i++){
 		
