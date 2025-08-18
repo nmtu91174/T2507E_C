@@ -29,7 +29,7 @@ int main(){
 	printf("\n------------------------------------\n");
 	
 	//int min = a[0];
-	int max = a[0];
+	int max = abs(a[0]);
 	
 //	for(int i=0; i<n; i++){
 //		if(a[i] < min){
@@ -52,7 +52,7 @@ int main(){
 //			}
 //	}
 	
-	for(int i=0; i<n; i++ ){
+	for(int i=1; i<n; i++ ){
 		if(abs(a[i]) > max){
 			
 			max = abs(a[i]);
