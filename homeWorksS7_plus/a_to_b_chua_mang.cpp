@@ -35,12 +35,13 @@ int main(){
 	for(int i = 1; i < n; i++){
 			
 			if(mang[i] < min){
-				min = mang[i];
-			}
 			
-			if(mang[i] > max){
-				max = mang[i];
-			}
+				min = mang[i];
+			
+			} else if(mang[i] > max){
+			
+					max = mang[i];
+				}
 	}
 	
 	a = min;
