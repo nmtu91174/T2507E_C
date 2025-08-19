@@ -1,6 +1,4 @@
 #include <stdio.h>
-#include <stdlib.h>
-#include <conio.h>
 
 void nhapMang(int a[], int n){
 	for(int i=0; i<n; i++){
@@ -71,11 +69,16 @@ int main(){
 		}
 	}
 	
-	
-	
 	printf("\nTong cua day con lien tuc Max: %d", maxTong);
+	printf("\n...");
 	printf("\nTu vi tri a[%d] den vi tri a[%d]", start, end);
+	printf("\n...");
 	
-	getch();
+	printf("\nDay con: ");
+	for(int i=start; i<= end; i++){
+		printf("%d  " , a[i]);
+	}
+	printf("\n");
+	
 	return 0;
 }
