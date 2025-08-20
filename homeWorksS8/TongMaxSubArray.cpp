@@ -16,7 +16,6 @@ void xuatMang(int a[], int n){
 	for(int i=0; i<n; i++){	
 		printf("%d ", a[i]);
 	}
-	printf("\n-------------\n");
 }
 
 int tinhTong(int a[], int start, int end){
@@ -52,6 +51,7 @@ int main(){
 	nhapMang(a, n);
 	xuatMang(a, n);
 	
+	printf("\n\n-------------\n");
 	int maxTong = a[0];
 	int start = 0;
 	int end = 0;
@@ -71,6 +71,7 @@ int main(){
 	
 	printf("\nTong cua day con lien tuc Max: %d", maxTong);
 	printf("\n...");
+	
 	printf("\nTu vi tri a[%d] den vi tri a[%d]", start, end);
 	printf("\n...");
 	
