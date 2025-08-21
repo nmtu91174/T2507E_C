@@ -26,26 +26,27 @@ int main(){
 
 	
 	int dem = 0;
-	int Min = a[0];
-	
+	int Min;
+		
 	for(int i=0; i<n; i++){
 		if(a[i]>0){
-	
+		Min = a[i];	
 		dem++;
 		break;
 		} 
 	}
+	
+		
 			
 	if(dem != 0){
 		
-		
-			
 		for(int i=0; i<n; i++){
 			
 			if(a[i] > 0 && a[i] < Min){
 				Min = a[i];
 			}
-		}	
+		}
+		
 		
 			printf("\n-------------------------\n");
 			printf("\nSo duong nho nhat la: %d", Min);
@@ -59,10 +60,10 @@ int main(){
 		}
 	
 	
-	printf("\nVi tri xuat hien cua so duong nho nhat la a[i]: ");
+	printf("\nVi tri xuat hien cua so duong nho nhat la [i]: ");
 	
 	for(int i=0; i<n; i++){
-		if(a[i]==Min){
+		if(a[i] > 0 && a[i]==Min){
 			printf("%d ", i);
 		}
 	}	
