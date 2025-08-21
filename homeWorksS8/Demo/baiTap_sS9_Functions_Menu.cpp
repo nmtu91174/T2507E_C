@@ -91,6 +91,31 @@ int daoNguoc_n(int n){
 		return dn;
 }
 
+//viet ham tinh tong cac chu so cua mot so nguyen duong
+
+int tongCacChuSo(int n, int s){
+	
+	for(;n>0; n=n/10){
+		int dv = n%10;
+		s+=dv;
+	}
+	
+	return s;
+}
+
+//Viet ham tim phan tu lon nhat trong mang
+
+int phanTuMax(int a[], int n, int max){
+	
+	for(int i=0; i<n; i++){
+		if(max>a[i]){
+			max=a[i];
+		}
+		
+		return max;
+	}
+}
+
 int main(){
 	
 	int chon;
@@ -102,8 +127,8 @@ int main(){
 		printf("3. tim boi so chung nho nhat\n");
 		printf("4. viet ham tinh S=x^y\n");
 		printf("5. viet ham dao nguoc so nguyen\n");
-		printf("6. \n");
-		printf("7. \n");
+		printf("6. viet ham tinh tong cac chu so cua mot so nguyen duong\n");
+		printf("7. Viet ham tim phan tu lon nhat trong mang\n");
 		printf("0. Exit\n");
 		
 		printf("\n-------------\n");
@@ -181,12 +206,55 @@ int main(){
 			}
 			
 			case 6:{
+				int n;
+				int s = 0;
+				do{
+					printf("\nNhap vao n: ");
+					scanf("%d", &n);
+					if(n<1){
+						printf("\nHay nhap vao so nguyen duong!");
+					}
+				}while(n<1);
 				
+				s = 0;
+				int temp = n;
+				s = tongCacChuSo(n, s);
+				printf("Tong cua cac chu so cua n (%d) la: %d", temp, s);
+				printf("\n-------------\n");	
 				break;
 			}
 			
 			case 7:{
+				int n;
+	
+				do{
+					printf("\nNhap so phan tu cho mang a[n]: ");
+					scanf("%d", &n);
+					
+					if(n<=0){
+						
+						printf("\nBan phai nhap vao so nguyen va lon hon 0!");
+						printf("\n-------------\n");
+						while (getchar() != '\n');
+					}
+					
+				} while(n<=0);
 				
+				int a[n];
+				
+				for(int i=0; i<n; i++){
+						
+						printf("\nNhap phan tu thu [%d]: ", i+1);
+						scanf("%d", &a[i]);
+					}
+				
+				int max = a[0];
+				
+				max = phanTuMax(a,n, max);
+				
+				printf("\nPhan tu lon nhat la: %d", max);
+				printf("\n-------------------------\n");
+					
 				break;
 			}
 			

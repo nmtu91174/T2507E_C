@@ -26,16 +26,19 @@ int main(){
 
 	
 	int dem = 0;
+	int Min = a[0];
 	
 	for(int i=0; i<n; i++){
 		if(a[i]>0){
-		//Min = a[i];
+	
 		dem++;
 		break;
 		} 
 	}
 			
 	if(dem != 0){
+		
+		
 			
 		for(int i=0; i<n; i++){
 			
