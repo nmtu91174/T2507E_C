@@ -25,7 +25,7 @@ int main(){
 	scanf("%d", &x);
 		
 	printf("\n\n-------------\n");
-	printf("\nx Xuat hien o vi tri a[i]: ");
+	printf("\nx Xuat hien o vi tri [i]: ");
 	for(int i=0; i<n; i++){
 		
 		if(a[i] == x){
