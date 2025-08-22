@@ -5,6 +5,7 @@
 
 //tinh tong cac chu so cua mot so nguyen n
 //
+
 int tongChuSo_n(int n){
 	
 	int s = 0;
@@ -20,7 +21,7 @@ int tongChuSo_n(int n){
 
 //tim USCLN cua hai so
 
-int USCLN(int x, int y){
+int uocSoChungMax(int x, int y){
 	
 	if(x==0 && y==0){
 		return false;
@@ -40,7 +41,7 @@ int USCLN(int x, int y){
 
 //tim boi so chung nho nhat
 
-int BSCNN(int x, int y){
+int boiSoChungMin(int x, int y){
 	
 //	xtemp = x;
 //	ytemp = y;
@@ -58,7 +59,7 @@ int BSCNN(int x, int y){
 //		y = z;
 //	}	int uscMax = x;
 	
-	int uscMax = USCLN(x,y);
+	int uscMax = uocSoChungMax(x,y);
 	
 	int bscMin = (x*y)/uscMax;
 	
@@ -108,12 +109,92 @@ int tongCacChuSo(int n, int s){
 int phanTuMax(int a[], int n, int max){
 	
 	for(int i=0; i<n; i++){
-		if(max<a[i]){
-			max=a[i];
+		if(a[i] > max){
+			max = a[i];
 		}
 		
 	}
 	return max;
+}
+
+//Viet ham tim phan tu nho nhat trong mang
+
+int phanTuMin(int a[], int n, int min){
+	
+	for(int i=0; i<n; i++){
+		if(a[i] < min){
+			min = a[i];
+		}
+		
+	}
+	return min;
+}
+
+//Nhap vao so phan tu cho mang
+
+int nhapSoPhanTu(int n){
+	do{
+		printf("\nNhap so phan tu cho mang a[n]: ");
+		scanf("%d", &n);
+			
+			if(n<=0){
+			
+			printf("\nBan phai nhap vao so nguyen va lon hon 0!");
+			printf("\n-------------\n");
+			while (getchar() != '\n');
+			}
+			
+	} while(n<=0);
+	
+	return n;
+}
+
+//Nhap mang
+void nhapMang(int a[], int n){
+	for(int i=0; i<n; i++){
+			
+		printf("\nNhap phan tu thu [%d]: ", i+1);
+		scanf("%d", &a[i]);
+	}
+	printf("\n-------------\n");	
+}
+
+//Xuat mang
+void xuatMang(int a[], int n){
+	
+	printf("\nCac phan tu da nhap la: ");
+	
+	for(int i=0; i<n; i++){	
+		printf("%d ", a[i]);
+	}
+	printf("\n-------------\n");
+}
+
+//Viet ham sap xep mang theo thu tu tang dan
+
+void sapXepTangBubble(int a[], int n){
+	
+	for(int i=0; i<n-1; i++){
+		for(int j=0; j<n-i-1; j++){
+			if(a[j]>a[j+1]){
+				int tg = a[j];
+				a[j] = a[j+1];
+				a[j+1] = tg;
+			}
+		}
+	}
+}
+
+//Viet ham dao nguoc mang
+
+void daoNguocMang(int a[], int n){
+	
+	for(int i=0; i<n/2; i++){
+		
+		int temp = a[i];
+		a[i] = a[n-i-1];
+		a[n-i-1] = temp;
+	}
 }
 
 int main(){
@@ -129,6 +210,10 @@ int main(){
 		printf("5. viet ham dao nguoc so nguyen\n");
 		printf("6. viet ham tinh tong cac chu so cua mot so nguyen duong\n");
 		printf("7. Viet ham tim phan tu lon nhat trong mang\n");
+		printf("8. Viet ham tim phan tu nho nhat trong mang\n");
+		printf("9. Viet ham sap xep mang theo thu tu tang dan\n");
+		printf("10. Viet ham dao nguoc mang\n");
+		
 		printf("0. Exit\n");
 		
 		printf("\n-------------\n");
@@ -144,6 +229,7 @@ int main(){
 				int n;
 				printf("\nNhap vao n: ");
 				scanf("%d", &n);
+				printf("\n");
 	
 				int s = tongChuSo_n(n);
 	
@@ -159,7 +245,7 @@ int main(){
 				printf("\nNhap vao b: ");
 				scanf("%d", &b);
 				
-				int uscMax = USCLN(a,b);
+				int uscMax = uocSoChungMax(a,b);
 				
 				printf("\nUSCLN %d", uscMax);
 				printf("\n-------------\n");
@@ -174,7 +260,7 @@ int main(){
 				printf("\nNhap vao b: ");
 				scanf("%d", &b);
 				
-				int bscMin = BSCNN(a,b);
+				int bscMin = boiSoChungMin(a,b);
 	
 				printf("\nBSCNN %d", bscMin);
 				printf("\n-------------\n");
@@ -263,6 +349,102 @@ int main(){
 					}
 				}
 				printf("\n-------------------------\n");	
+				break;
+			}
+			
+			case 8:{
+				int n;
+	
+				do{
+					printf("\nNhap so phan tu cho mang a[n]: ");
+					scanf("%d", &n);
+					
+					if(n<=0){
+						
+						printf("\nBan phai nhap vao so nguyen va lon hon 0!");
+						printf("\n-------------\n");
+						while (getchar() != '\n');
+					}
+					
+				} while(n<=0);
+				
+				int a[n];
+				
+				for(int i=0; i<n; i++){
+						
+						printf("\nNhap phan tu thu [%d]: ", i+1);
+						scanf("%d", &a[i]);
+					}
+				printf("\n-------------------------\n");
+				
+				int min = a[0];
+				
+				min = phanTuMin(a,n, min);
+				
+				printf("\nPhan tu nho nhat la: %d", min);
+				printf("\n-------------------------\n");
+				
+				printf("\nVi tri xuat hien cua Max [i]: ");
+				for(int i=0; i<n; i++){
+					if(a[i] == min){
+						printf("%d \t", i);
+					}
+				}
+				printf("\n-------------------------\n");	
+				break;
+			}
+			
+			case 9:{
+				int n;
+	
+				do{
+					printf("\nNhap so phan tu cho mang a[n]: ");
+					scanf("%d", &n);
+					
+					if(n<=0){
+						
+						printf("\nBan phai nhap vao so nguyen va lon hon 0!");
+						printf("\n-------------\n");
+						while (getchar() != '\n');
+					}
+					
+				} while(n<=0);
+
+				int a[n];
+				
+				for(int i=0; i<n; i++){
+						
+					printf("\nNhap phan tu thu [%d]: ", i+1);
+					scanf("%d", &a[i]);
+				}
+									
+				printf("\n-------------------------\n");
+				
+				sapXepTangBubble(a,n);
+				
+				printf("\nMang sau khi sap xep tang dan: ");
+				for(int i=0; i<n; i++){
+					printf("%2d ", a[i]);
+				}
+				printf("\n\n-------------------------\n");
+				
+				break;
+			}
+			
+			case 10:{
+				int n;
+				
+				n = nhapSoPhanTu(n);
+				int a[n];
+				nhapMang(a,n);
+				xuatMang(a,n);
+				daoNguocMang(a,n);
+				printf("\nMang sau khi dao nguoc: ");
+				for(int i=0; i<n; i++){
+					printf("%2d ", a[i]);
+				}
+				printf("\n\n-------------------------\n");
+				
 				break;
 			}
 			
