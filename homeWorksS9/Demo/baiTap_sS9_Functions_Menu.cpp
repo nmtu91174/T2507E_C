@@ -108,12 +108,12 @@ int tongCacChuSo(int n, int s){
 int phanTuMax(int a[], int n, int max){
 	
 	for(int i=0; i<n; i++){
-		if(max>a[i]){
+		if(max<a[i]){
 			max=a[i];
 		}
 		
-		return max;
 	}
+	return max;
 }
 
 int main(){
@@ -247,6 +247,7 @@ int main(){
 						printf("\nNhap phan tu thu [%d]: ", i+1);
 						scanf("%d", &a[i]);
 					}
+				printf("\n-------------------------\n");
 				
 				int max = a[0];
 				
@@ -254,7 +255,14 @@ int main(){
 				
 				printf("\nPhan tu lon nhat la: %d", max);
 				printf("\n-------------------------\n");
-					
+				
+				printf("\nVi tri xuat hien cua Max [i]: ");
+				for(int i=0; i<n; i++){
+					if(a[i] == max){
+						printf("%d \t", i);
+					}
+				}
+				printf("\n-------------------------\n");	
 				break;
 			}
 			

@@ -2,7 +2,7 @@
 
 int main(){
 
-	int n, i;
+	int n;
 	
 	printf("Hay nhap vao mot so n (n >= 0): ");
 	scanf("%d", &n);
@@ -13,29 +13,35 @@ int main(){
     //int i = 2;
     int fn = f0 + f1;
     
-
-    while (n>=0) {
-       
-        f0 = f1;
-        f1 = fn;
-        
-        fn = f0 + f1;
-        
-		
-//        printf("F%d la %d\n", i, f1);
-//        
-//        i = i + 1;
-        
-        if(fn>n){
+    for(;fn<=n; (f0=f1) && (f1=fn)){
+    	
+    	fn = f0 + f1;
+    	
+    	if(fn>n){
     	printf("\n");
     	printf("\n------------------------\n");
     	printf("Tiem can = %d\n", f1);
     	break;
 		}
-    }
+	}
 
-    
-    
-    
+//    while (fn<=n) {
+//       
+//        fn = f0 + f1;
+//        
+//		
+////        printf("F%d la %d\n", i, f1);
+////                 
+//        if(fn>n){
+//    	printf("\n");
+//    	printf("\n------------------------\n");
+//    	printf("Tiem can = %d\n", f1);
+//    	break;
+//		}
+//		
+//		f0 = f1;
+//        f1 = fn;
+//    }
+
     return 0;
 }

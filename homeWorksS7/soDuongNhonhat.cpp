@@ -59,7 +59,7 @@ int main(){
 		}
 	
 	
-	printf("\nVi tri xuat hien cua so duong nho nhat la a[i]: ");
+	printf("\nVi tri xuat hien cua so duong nho nhat la [i]: ");
 	
 	for(int i=0; i<n; i++){
 		if(a[i]==Min){
