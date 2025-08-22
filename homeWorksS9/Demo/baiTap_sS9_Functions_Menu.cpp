@@ -4,7 +4,7 @@
 #include <stdlib.h>
 
 //tinh tong cac chu so cua mot so nguyen n
-
+//
 int tongChuSo_n(int n){
 	
 	int s = 0;
